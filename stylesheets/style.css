@@ -118,9 +118,9 @@ section{
 /* Home Styles */
 
 #home-photo{
-	height: 212px;
+	height: 237px;
 	width: 100%;
-	background: url('http://placehold.it/300x195') no-repeat;
+	background: url('../images/profile.jpg') no-repeat;
 	background-size: cover;
 	border: 10px solid #fff;
 	-webkit-box-shadow:  0px 0px 13px 1px rgba(0, 0, 0, 0.2);
