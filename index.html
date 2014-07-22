@@ -21,19 +21,21 @@
 <script src="javascripts/modernizr.foundation.js"></script>
 <link href='//fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
 
-<link rel="shortcut icon" href="favicon.ico"> 
+<link rel="shortcut icon" href="favicon.ico">
 </head>
 
 <body>
-	<a id="home-nav"></a>
-	<div class="navi" data-magellan-expedition>
-						<ul >
-						  <li data-magellan-arrival='home' class="hasatip" data-width="210" title="Home"><a href="#home-nav" class="scroll"><i class="fa fa-home"></i></a></li>
-						  <li data-magellan-arrival='profile' class="hasatip" data-width="210" title="Profile"><a href="#profile-nav" class="scroll"><i class="fa fa-user"></i></a></li>
-						  <li data-magellan-arrival='contact' class="hasatip" data-width="210" title="Hangouts"><a href="#contact-nav" class="scroll"><i class="fa fa-comments"></i></a></li>	  
-						</ul>
-    				</div>
-  <div class="row">
+<a id="home-nav"></a>
+
+<div class="navi" data-magellan-expedition>
+	<ul >
+		<li data-magellan-arrival='home' class="hasatip" data-width="210" title="Home"><a href="#home-nav" class="scroll"><i class="fa fa-home"></i></a></li>
+		<li data-magellan-arrival='profile' class="hasatip" data-width="210" title="Profile"><a href="#profile-nav" class="scroll"><i class="fa fa-user"></i></a></li>
+		<li data-magellan-arrival='contact' class="hasatip" data-width="210" title="Hangouts"><a href="#contact-nav" class="scroll"><i class="fa fa-comments"></i></a></li>	  
+	</ul>
+</div>
+
+<div class="row">
     <div class="twelve columns" id="main-container">
 
     	<section class="row" id="home">
@@ -96,7 +98,7 @@
     		</div>
     		
             <div class="button right">
-                <i class="fa fa-download left">&nbsp;</i><span class="left"><a target="_blank" href="//onedrive.live.com/redir?resid=22C99329C15AA712%2137596">Download Resume</a></span>
+                <i class="fa fa-download left">&nbsp;</i><span class="left"><a target="_blank" href="//onedrive.live.com/redir?resid=22C99329C15AA712%215131">Download Resume</a></span>
             </div>
 
     	</section><!-- end of Profile -->
@@ -119,6 +121,7 @@
                         <a target="_blank" href="//instagram.com/armchairtheorist"><i class="fa fa-instagram "></i></a>
                         <a target="_blank" href="//foursquare.com/armchairdude"><i class="fa fa-foursquare"></i></a>
                         <a target="_blank" href="//www.youtube.com/user/armchairtheorist"><i class="fa fa-youtube-square"></i></a>
+                        <a target="_blank" href="//github.com/armchairtheorist"><i class="fa fa-github-square"></i></a>
     				</div>
     				<br />
     			</div>
@@ -145,13 +148,17 @@
 
 <script>
     $(window).load(function(){
-      $("#featured").orbit({
-      	directionalNav: false,
-      });
+    	$("#featured").orbit({
+      		directionalNav: false,
+      	});
       
-      $("#project-1-slideshow").orbit({
-      	directionalNav: false,
-      });
+      	$("#project-1-slideshow").orbit({
+      		directionalNav: false,
+      	});
+
+      	$("a").on('click', function(e){
+            ga('send', 'event', 'Outbound Link', 'http:' + $(this).attr("href"));
+    	});
     });
 </script>
 
